@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Husky Book Store</title>
     <link rel="stylesheet" href="Estilos/globals.css">
+    <link rel="stylesheet" href="Estilos/script.css">
 </head>
 <body>
     <div class="navbar ">
@@ -45,15 +46,25 @@
     <main>
         <div class="gray-background">
             <div class="page-inner-content">
-                <div class="cols cols-3">
-                    <img src="images/produtos/produto2.jpg">
+                <div class="cols cols-3" id="livros">
+                    <!-- <img src="images/produtos/produto2.jpg">
                     <img src="images/produtos/produto3.jpg">
-                    <img src="images/produtos/produto4.jpg">
+                    <img src="images/produtos/produto4.jpg"> -->
                 </div>
             </div>
         </div>
-
-        <div>
+        
+        <div class="page-inner-content"></div>
+        <h3 class="section-title">Livros Mais Vendidos</h3>
+        <div class="subtitle-underline"></div>
+        <div class="cols cols-4" id="livros-1"></div>
+        
+        <div class="page-inner-content"></div>
+        <h3 class="section-title">Livros Infantis e Ebooks</h3>
+        <div class="subtitle-underline"></div>
+        <div class="cols cols-4" id="livros-1"></div>
+        
+        <!-- <div>
             <div class="page-inner-content"></div>
             <h3 class="section-title">Livros Mais Vendidos</h3>
             <div class="subtitle-underline"></div>
@@ -137,7 +148,7 @@
                     <p class="product-price">28.51<span>$ Reais</span> </p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="gray-background">
             <div class="page-inner-content">
@@ -221,6 +232,7 @@
 
     </footer>
 
+    <script src="JS/script.js"></script>
     <script>
         const navbar = document.querySelector (".navbar");
         const menuButton = document.querySelector (".menu-button");
