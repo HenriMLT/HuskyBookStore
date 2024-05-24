@@ -6,15 +6,35 @@
     <title>Login</title>
     <script src="https://kit.fontawesome.com/52f93e3486.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="Estilos/stilo.css">
+    <link rel="stylesheet" href="Estilos/globals.css">
 </head>
 <body>
+    <div class="navbar ">
+        <div class="header-inner-content " >
+            <a href="index.html"><img src="images/Logo.png"></a>
+            <a href="index.html"><h1 class="logo ">Husky<span>BookStore</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="categorias.html">Categorias</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <a href="carrinho.html"><img src="images/cart.png" ></a>
+                <img src="images/menu.png" class="menu-button">
+                <a href="usuario.html"><img src="images/Perfil.png" class="usuario-button"></a>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="content first-content">
            <div class="first-column">
             <h2 class="title title-primary">Bem-Vindo</h2>
             <p class="description description-primary">Para se conectar conosco</p>
             <p class="description description-primary">Faça login com suas informações pessoais</p>
-            <button class="btn btn.primary ">Entre</button>
+           <a href="entre.html"><button class="btn btn.primary ">Entre</button></a>
            </div>  
            <div class="second-column">
             <h2 class="title title-second">Criando Conta </h2>
@@ -34,31 +54,7 @@
             </form>
            </div> <!--second column-->
         </div><!--First content-->
-        <div class="content second-content">
-            <div class="first-column">
-                <h2 class="title">Olá Amigo!</h2>
-                <p class="description">Insira Suas credencias </p>
-                <p class="description">Suas informações pessoais</p>
-                <button class="btn">Registre-se</button>
-               </div>  
-               <div class="second-column">
-                <h2 class="title">Entrar</h2>
-                <div class="social-media">
-                    <ul>
-                        <li><a href="#">facebook</a></li>
-                        <li><a href="#">google+</a></li>
-                        <li><a href="#">linkedin</a></li>
-                    </ul>
-                </div><!--social media-->
-                <p class="description">Ou utilize o seu email para o entrar </p>
-                <form class="form">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Senha">
-                    <a href="">Esqueceu sua senha?</a>
-                    <button class="btn">Entre</button>
-                </form>
-               </div> <!--second column-->
-        </div><!--second content-->
+   
     </div>
     
 </body>

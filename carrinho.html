@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Estilos/globals.css">
     <link rel="stylesheet" href="Estilos/script.css">
     <link rel="stylesheet" href="Estilos/carrinho.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="navbar ">
@@ -28,7 +29,6 @@
             </div>
         </div>
     </div>
-
     <!--Main content-->
     <main>
         <div class="page-title">Seu Carrinho</div>
@@ -45,24 +45,91 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <td></td>
-                        <td>R$ 120</td>
-                        <td>
-                            <div class="qty">
-                                <button>-</button>
-                                <span>#</span>
-                                <button>+</button>
-                            </div>
-                        </td>
-                        <td>R$ 240</td>
-                        <td>
-                            <button>x</i></button>
-                        </td>
+                            <tr>
+                                <td>
+                                    <div class="producto">
+                                        <img src="https://picsum.photos/100/120" alt="">
+                                        <div class="info">
+                                            <div class="name">Nome do Produto</div>
+                                            <div class="category">categoria</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>R$ 120</td>
+                                <td>
+                                    <div class="qty">
+                                        <button><i class='bx bx-minus'></i></button>
+                                        <span>2</span>
+                                        <button><i class='bx bx-plus'></i></button>
+                                    </div>
+                                </td>
+                                <td>R$ 240</td>
+                                <td>
+                                <button class="remove"><i class='bx bx-x'></i></button>
+                                </td>
+                            </tr>              
                     </tbody>
                 </table>
             </section>
-            <aside>res</aside>
+            <aside>
+                <div class="box">
+                    <header >Resumo da Compra</header>
+                    <div class="info">
+                        <div><span>Sub-total</span><span>R$ 418</span></div>
+                        <div><span>Frete</span><span>Gratuito</span></div>
+                        <div><button>Add Cupom de desconto<i class='bx bx-right-arrow-alt'></i></button></div>
+                    </div>
+                    <footer>
+                        <span>Total</span>
+                        <span>R$ 418</span>
+                    </footer>
+                </div>
+                <button>Finalizar Compra</button>
+            </aside>
         </div>
     </main>
+    <footer class="gray-background">
+        <div class="page-inner-content footer-content">
+            <div class="download-options">
+                <p>EM BREVE APP</p>
+                <P>ANDROID E IOS</P>
+                <div>
+                  <img src="images/app-store.png" > 
+                  <img src="images/play-store.png" > 
+                </div>
+            </div>
+
+            <div class="logo-footer">
+                <h1 class="logo">Husky<span>BookStore</span></h1>
+                <p>Nosso objetivo é trazer a leitura para todas as idades
+                   Incentivando a leitura desde pequenos , para conseguir ter conhecimento e vontade de ler. 
+                </p>
+            </div>
+
+            <div class="links-footer">
+                <h3>Links úteis</h3>
+                <ul>
+                    <li>Pontos</li>
+                    <li>Blog Post</li>
+                    <li>Políticas</li>
+                    <li>Quem Somos</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="page-inner-content"/>
+        <div class="page-inner-content copyright">
+            <p>Copyright 2024 - HuskyBookStore - Todos os Direitos Reservados</p>
+        </div>
+
+    </footer>
+
+    <script src="JS/script.js"></script>
+    <script>
+        const navbar = document.querySelector (".navbar");
+        const menuButton = document.querySelector (".menu-button");
+        menuButton.addEventListener("click", () => {
+            navbar.classList.toggle("show-menu");
+        });
+    </script>
 </body>
 </html>
