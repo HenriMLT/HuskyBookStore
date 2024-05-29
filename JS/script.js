@@ -348,8 +348,8 @@ function removeAll(tag){
 }
  function removeAllItems(){
     let cartItems = localStorage.getItem('productsInCart')
-    var totalPrice = parseFloat(localStorage.getItem("totalCost"));
-    var N = parseFloat(localStorage.getItem("cartNumbers"));
+    // var totalPrice = parseFloat(localStorage.getItem("totalCost"));
+    // var N = parseFloat(localStorage.getItem("cartNumbers"));
 
     console.log(cartItems);
     delete cartItems.removeAllItems;

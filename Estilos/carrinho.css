@@ -11,7 +11,11 @@ main{
     
 }
 
-
+.page-title {
+    font-size: large;
+    font-weight: bold;
+    margin-left: 45%;
+}
 
 .container,
 .products-container {
@@ -113,12 +117,13 @@ main{
     background-color: #0084ff;
     border: none;
     cursor: pointer;
-    padding: 0.25rem 0.4rem;
+    padding: 0.25rem 1rem;
     border-radius: 9999px;
     color: #fff;
     font-weight: 500;
     font-size: 0.9rem;
     transition: all 02.s;
+    margin-left:78%;
 }
 
 @media (max-width :800px) {
