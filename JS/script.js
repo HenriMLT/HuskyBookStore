@@ -297,16 +297,18 @@ function displayCart() {
         productContainer.innerHTML = ''
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
-            <div class="product">
-                <div class="botaofechar"><ion-icon name="close-circle-outline"></ion-icon></div>
+            <div class="product" id='${item.id}'>
+                <div class="botaofechar">
+                    <ion-icon onclick=removeAll('${item.tag}') class="remove-all" name="close-circle-outline"></ion-icon>
+                </div>
                 <img id="imgcarrinho" src="${item.tag}">
                 <span>${item.name}</span>
             </div>      
             <div class="price">R$ ${item.price}</div>
             <div class="quantity">
-                <ion-icon name="remove-circle-outline"></ion-icon>
+                <ion-icon onclick="removeOne('${item.tag}')" name="remove-circle-outline"></ion-icon>
                 <span> ${item.inCart}</span>
-                <ion-icon name="add-circle-outline"></ion-icon>
+                <ion-icon onclick="addOne('${item.tag}')" name="add-circle-outline"></ion-icon>
             </div>                  
             <div class="total">
                R$ ${item.inCart * item.price}
@@ -330,5 +332,63 @@ function displayCart() {
     }
 }
 
+function removeAll(tag){
+    //gets data from localstorage
+    var cart = JSON.parse(localStorage.getItem("productsInCart"));
+    var totalPrice = parseFloat(localStorage.getItem("totalCost"));
+    var N = parseFloat(localStorage.getItem("cartNumbers"));
+
+    //gets the correct item
+    var item = cart[tag]
+    
+    //deletes the item
+    delete cart[tag]
+    localStorage.setItem("productsInCart", JSON.stringify(cart));
+    localStorage.setItem("totalCost", totalPrice - (item.price * item.inCart))
+    localStorage.setItem("cartNumbers", N - item.inCart)
+    location.reload();
+}
+
+function addOne(tag){
+    //gets data from localstorage
+    var cart = JSON.parse(localStorage.getItem("productsInCart"));
+    var totalPrice = parseFloat(localStorage.getItem("totalCost"));
+    var N = parseFloat(localStorage.getItem("cartNumbers"));
+
+    //gets the correct item
+    var item = cart[tag];
+
+    //change values
+    item.inCart++; //adds one more inCart
+    localStorage.setItem("productsInCart", JSON.stringify(cart));
+    localStorage.setItem("totalCost", totalPrice + item.price);
+    localStorage.setItem("cartNumbers", N + 1);
+    location.reload();
+}
+
+function removeOne(tag){
+    //gets data from localstorage
+    var cart = JSON.parse(localStorage.getItem("productsInCart"));
+    var totalPrice = parseFloat(localStorage.getItem("totalCost")); //
+    var N = parseFloat(localStorage.getItem("cartNumbers"));
+
+    //gets the correct item
+    var item = cart[tag]
+
+    //changes values of cart items
+    if (item.inCart > 1){
+        item.inCart--
+        localStorage.setItem("productsInCart", JSON.stringify(cart));
+    }
+    else{
+        delete cart[tag];
+        localStorage.setItem("productsInCart", JSON.stringify(cart));
+    }
+
+    //changes total price and total number of products
+    localStorage.setItem("totalCost", totalPrice - item.price);
+    localStorage.setItem("cartNumbers", N - 1);
+    location.reload();
+}
 onLoadCartNumbers();
 displayCart();
