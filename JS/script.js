@@ -292,12 +292,11 @@ function displayCart() {
     let productContainer = document.querySelector('.products')
     let cartCost = localStorage.getItem('totalCost')
 
-    console.log(cartItems)
     if (cartItems && productContainer) {
         productContainer.innerHTML = ''
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
-            <div class="product" id='${item.id}'>
+            <div class="product">
                 <div class="botaofechar">
                     <ion-icon onclick=removeAll('${item.tag}') class="remove-all" name="close-circle-outline"></ion-icon>
                 </div>
@@ -314,7 +313,6 @@ function displayCart() {
                R$ ${item.inCart * item.price}
             </div>
             `
-            console.log(item.tag)
         })
 
         productContainer.innerHTML += `
@@ -348,6 +346,18 @@ function removeAll(tag){
     localStorage.setItem("cartNumbers", N - item.inCart)
     location.reload();
 }
+ function removeAllItems(){
+    let cartItems = localStorage.getItem('productsInCart')
+    var totalPrice = parseFloat(localStorage.getItem("totalCost"));
+    var N = parseFloat(localStorage.getItem("cartNumbers"));
+
+    console.log(cartItems);
+    delete cartItems.removeAllItems;
+    localStorage.setItem("productsInCart", 0);
+    localStorage.setItem("totalCost", 0)
+    localStorage.setItem("cartNumbers", 0)
+    location.reload();
+ }
 
 function addOne(tag){
     //gets data from localstorage

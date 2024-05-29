@@ -41,9 +41,8 @@
                     <h5 class="quantity">QUANTIDADE</h5>
                     <h5 class="total">TOTAL</h5>
                 </div>
-                <div class="products">
-                    
-                </div>
+                <div class="products"></div>
+                <button onclick="alerta()" class="finalizar-compra">Finalizar Compra</button>
             </div>
             <section>
                 
@@ -147,6 +146,12 @@
         menuButton.addEventListener("click", () => {
             navbar.classList.toggle("show-menu");
         });
+    </script>
+    <script>
+        function alerta(){
+            alert("Compra Finalizada com Sucesso!");
+            removeAllItems();
+        }
     </script>
 </body>
 </html>
