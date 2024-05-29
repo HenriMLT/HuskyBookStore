@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="Estilos/globals.css">
     <link rel="stylesheet" href="Estilos/script.css">
     <link rel="stylesheet" href="Estilos/carrinho.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+
 </head>
 <body>
     <div class="navbar ">
@@ -23,7 +25,7 @@
                 </ul>
             </nav>
             <div class="nav-icon-container">
-                <a href="carrinho.html"><img src="images/cart.png" ></a>
+                <a href="carrinho.html" class="cart"><span>0</span><img src="images/cart.png" ></a>
                 <img src="images/menu.png" class="menu-button">
                 <a href="usuario.html"><img src="images/Perfil.png" class="usuario-button"></a>
             </div>
@@ -32,10 +34,23 @@
     <!--Main content-->
     <main>
         <div class="page-title">Seu Carrinho</div>
-        <div class="content">
+        <div class="container">
+            <div class="products-container">
+                <div class="products-header">
+                    <h5 class="product-title">PRODUTO</h5>
+                    <h5 class="price">PREÇO</h5>
+                    <h5 class="quantity">QUANTIDADE</h5>
+                    <h5 class="total">TOTAL</h5>
+                </div>
+                <div class="products">
+                    
+                </div>
+            </div>
             <section>
+                
                 <table>
-                    <thead>
+                    
+                    <!-- <thead>
                         <tr>
                             <th>Produto</th>
                             <th>Preço</th>
@@ -43,39 +58,40 @@
                             <th>Total</th>
                             <th>-</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                            <tr>
-                                <td>
+                    </thead> -->
+                    <!-- <tr class="products-container"></tr> -->
+                    <!-- <tbody>
+                            
+                                 <td>
                                     <div class="producto">
                                         <img src="https://picsum.photos/100/120" alt="">
                                         <div class="info">
                                             <div class="name">Nome do Produto</div>
-                                            <div class="category">categoria</div>
                                         </div>
                                     </div>
-                                </td>
-                                <td>R$ 120</td>
-                                <td>
+                                </td> -->
+                                <!-- <td class="price">price</td> -->
+                                <!-- <td>
                                     <div class="qty">
                                         <button><i class='bx bx-minus'></i></button>
-                                        <span>2</span>
+                                        <span>0</span>
                                         <button><i class='bx bx-plus'></i></button>
                                     </div>
-                                </td>
-                                <td>R$ 240</td>
-                                <td>
+                                </td> -->
+                                <!-- <td class="total">total</td> -->
+                                <!-- <td>
                                 <button class="remove"><i class='bx bx-x'></i></button>
                                 </td>
                             </tr>              
-                    </tbody>
+                    </tbody> -->
                 </table>
             </section>
-            <aside>
+            <!-- <aside>
                 <div class="box">
                     <header >Resumo da Compra</header>
                     <div class="info">
                         <div><span>Sub-total</span><span>R$ 418</span></div>
+                        <div><span>Sub-total</span></div>
                         <div><span>Frete</span><span>Gratuito</span></div>
                         <div><button>Add Cupom de desconto<i class='bx bx-right-arrow-alt'></i></button></div>
                     </div>
@@ -85,7 +101,7 @@
                     </footer>
                 </div>
                 <button>Finalizar Compra</button>
-            </aside>
+            </aside> -->
         </div>
     </main>
     <footer class="gray-background">
@@ -124,6 +140,8 @@
     </footer>
 
     <script src="JS/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
         const navbar = document.querySelector (".navbar");
         const menuButton = document.querySelector (".menu-button");
