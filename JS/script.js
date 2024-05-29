@@ -137,83 +137,83 @@ let carts = document.querySelectorAll('.add-cart');
 let products = [
     {
         name: 'Harry Potter',
-        tag: 'HP',
+        tag: 'https://m.media-amazon.com/images/I/5165He67NEL._SY445_SX342_.jpg',
         price: 50.75,
         inCart: 0
     },
     {
         name: 'Box-Dom Quixote por Miguel de Cervantes',
-        tag: 'Dom Quixote',
+        tag: 'https://m.media-amazon.com/images/I/41E1eMLNXVL._SX342_SY445_.jpg',
         price: 156.75,
         inCart: 0
     },
     {
         name: 'O Senhor dos Anéis por J.R.R. Tolkien',
-        tag: 'LOTR',
+        tag: 'https://m.media-amazon.com/images/I/514M+qMYWSL._SY445_SX342_.jpg',
         price: 87.48,
         inCart: 0
     },
     {
         name: 'O Alquimista por Paulo Coelho',
-        tag: 'Alquimista',
+        tag: 'https://m.media-amazon.com/images/I/51cF7jnQGBS._SY445_SX342_.jpg',
         price: 38.90,
         inCart: 0
     },
     {
         name: 'O Pequeno Príncipe de Antoine de Saint-Exupéry',
-        tag: 'Pequeno Principe',
+        tag: 'https://m.media-amazon.com/images/I/81TmOZIXvzL._SY466_.jpg',
         price: 19.90,
         inCart: 0
     },
     {
         name: 'Onde vivem os monstros por Maurice Sendak',
-        tag: 'Monstros',
+        tag: 'https://m.media-amazon.com/images/I/61WE-zN+Q+L._SX342_SY445_.jpg',
         price: 55.74,
         inCart: 0
     },
     {
         name: 'O Grufalo por Julia Donaldson e Axel Scheffler',
-        tag: 'Grufalo',
+        tag: 'https://m.media-amazon.com/images/I/51fsECuE09L._SX342_SY445_.jpg',
         price: 46.90,
         inCart: 0
     },
     {
         name: 'A Lagarta Muito Comilona por Eric Carle',
-        tag: 'Comilona',
+        tag: 'https://m.media-amazon.com/images/I/71b5JH10OpL._SY466_.jpg',
         price: 46.08,
         inCart: 0
     },
     {
         name: 'Cinquenta tons de cinza eBook Kindle',
-        tag: 'Cinquenta Tons',
+        tag: 'https://m.media-amazon.com/images/I/515vbT3t2UL._SY445_SX342_.jpg',
         price: 42.21,
         inCart: 0
     },
     {
         name: 'A garota no trem eBook Kindle',
-        tag: 'Garota no Trem',
+        tag: 'https://m.media-amazon.com/images/I/51s6lglXdSL._SY445_SX342_.jpg',
         price: 26.53,
         inCart: 0
     },
     {
         name: 'A culpa é das estrelas eBook Kindle',
-        tag: 'Culpa das Estrelas',
+        tag: 'https://m.media-amazon.com/images/I/811ivBP1rsL._SY466_.jpg',
         price: 27.63,
         inCart: 0
     },
     {
         name: 'Capitães da Areia eBook Kindle',
-        tag: 'Capitaes',
+        tag: 'https://m.media-amazon.com/images/I/81iVW0VvbUL._SY466_.jpg',
         price: 28.51,
         inCart: 0
     },
     {
         name: 'Bíblia Sagrada - Edição Pastoral',
-        tag: 'Biblia',
+        tag: 'Bhttps://d1pkzhm5uq4mnt.cloudfront.net/imagens/capas/mp_a6d2876c770d633fbdf6bc6ef4673212.jpg',
         price: 20.51,
         inCart: 0
     }
-]
+];
 
 for (let i=0; i< carts.length; i++) {
     carts[i].addEventListener('click', ()=>{
@@ -298,22 +298,21 @@ function displayCart() {
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
             <div class="product">
-                <ion-icon name="close-circle"></ion-icon>
-                <img src="./images/${item.tag}.jpg">
+                <div class="botaofechar"><ion-icon name="close-circle-outline"></ion-icon></div>
+                <img id="imgcarrinho" src="${item.tag}">
                 <span>${item.name}</span>
             </div>      
-            <div class="price">${item.price}</div>
+            <div class="price">R$ ${item.price}</div>
             <div class="quantity">
-                <ion-icon class="decrease"
-                name="arrow-dropleft-circle"</ion-icon>
-                <span>${item.inCart}</span>
-                <ion-icon class="increase"
-                name="arrow-dropright-circle"></ion-icon>
+                <ion-icon name="remove-circle-outline"></ion-icon>
+                <span> ${item.inCart}</span>
+                <ion-icon name="add-circle-outline"></ion-icon>
             </div>                  
             <div class="total">
-                $${item.inCart * item.price}
+               R$ ${item.inCart * item.price}
             </div>
             `
+            console.log(item.tag)
         })
 
         productContainer.innerHTML += `
@@ -323,10 +322,10 @@ function displayCart() {
                 </h4>
                 
                 <h4 class ="basketTotal">
-                    $${cartCost}
+                    R$ ${cartCost}
                 </h4>
             </div>
-        `
+        `;
 
     }
 }

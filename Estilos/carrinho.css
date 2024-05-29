@@ -1,19 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
-.container>
-.products-container {
-    max-width: 650px;
-    justify-content: space-around;
-    margin: 0 auto;
-    margin-top: 50px;
+body{
+    background-color: #ccc;
+    font-family: 'Lato'm 'sans-serif';
 }
 
+main{
+    background: #fff;
+    padding: 0 30px;
+    
+}
+
+
+
+.container,
 .products-container {
     max-width: 650px;
     justify-content: space-around;
     margin: 0 auto;
     margin-top: 50px;
+    padding-bottom: 100px;  
+}
+/* #imgcarrinho{
+    max-width: 76px;
+    height: 130px;
+} */
+
+/* .decrease{
+    width: 70%;
+    align-items:left;
+
+} */
+.products-container ion-icon{
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    
 }
 
 .products-header {
@@ -27,6 +51,7 @@
 
 .product-title {
     width: 45%;
+    text-transform: uppercase;
 }
 
 .price {
@@ -49,27 +74,88 @@
     display: flex;
     align-items: center;
 }
-
-.product {
+.product{
     width: 45%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid lightseagreen;
+    border-bottom: 1px solid lightgray;
+}
+.botaofechar{
+   width: 300px;
+   height: -10px;
+}
+.product ion-icon{
+    cursor: pointer;
+
+}
+.products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid lightseagreen; */
+}
+.products img {
+    width: 75px;
+}
+.basketTotalTitle{
+    width: 30%;
 }
 
-/* body{
-    background-color: #ccc;
-    font-family: 'Lato'm 'sans-serif';
+.basketTotal{
+    width: 10%;
 }
 
-main{
-    background: #fff;
-    padding: 0 30px;
-    
+@media (max-width :800px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .header-bottom-side {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    nav {
+        position: absolute;
+        background-color: #FFB967;
+        width: 100%;
+        top: 46px;
+        display: none;
+    }
+
+    .show-menu nav {
+        display: block;
+    }
+
+    nav ul {
+        list-style: none;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 0.8rem;
+    }
+
 }
-button{
+
+.basketTotalContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* button{
     cursor:pointer;
     
 }
@@ -229,4 +315,4 @@ aside>.rodape{
 }
 .box>.info>div:last-child{
     margin:0;
-} */
+} */ 

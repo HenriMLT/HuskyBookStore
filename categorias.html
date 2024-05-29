@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categorias</title>
     <link rel="stylesheet" href="Estilos/globals.css">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
 </head>
 <body>
     <div class="navbar ">
@@ -20,9 +22,9 @@
                 </ul>
             </nav>
             <div class="nav-icon-container">
-                <a href="carrinho.html"><img src="images/cart.png" ></a>
+                <a href="carrinho.html" class="cart"><span>0</span><img src="images/cart.png"></a>
                 <img src="images/menu.png" class="menu-button">
-                <img src="images/Perfil.png" class="usuario-button">
+                <a href="usuario.html"><img src="images/Perfil.png" class="usuario-button"></a>
             </div>
         </div>
     </div>
@@ -30,51 +32,45 @@
         <div class="gray-background">
             <div class="page-inner-content">
                 <div class="cols cols-3" id="livros-1">
-                    <!-- <img src="images/produtos/produto2.jpg">
+                    <img src="images/produtos/produto2.jpg">
                     <img src="images/produtos/produto3.jpg">
-                    <img src="images/produtos/produto4.jpg"> -->
+                    <img src="images/produtos/produto4.jpg">
                 </div>
             </div>
         </div>
 
-        <div class="page-inner-content"></div>
-        <h3 class="section-title">Livros Mais Vendidos</h3>
-        <div class="subtitle-underline"></div>
-        <div class="cols cols-4" id="livros-2"></div>
-
-        <div class="page-inner-content"></div>
-        <h3 class="section-title">Livros Infantis e Ebooks</h3>
-        <div class="subtitle-underline"></div>
-        <div class="cols cols-4" id="livros-3"></div>
-
-        <!-- <div>
+        <div>
             <div class="page-inner-content"></div>
             <h3 class="section-title">Livros Mais Vendidos</h3>
             <div class="subtitle-underline"></div>
             <div class="cols cols-4">
                 <div class="product">
-                    <img src="images/produtos/produto5.png">
+                    <img src="https://m.media-amazon.com/images/I/81tRn81u64L._SY466_.jpg">
                     <p class="product-name"> Box-Dom Quixote por Miguel de Cervantes</p>
                     <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                     <p class="product-price">156.75<span>$ Reais</span> </p>
+                    <button id="botao" class="add-cart cart2"> Compre &#8594; </button>
                 </div>
                 <div class="product">
-                    <img src="images/produtos/produto6.png">
+                    <img src="https://harpercollins.com.br/cdn/shop/products/9786555114355.jpg?v=1691738135">
                     <p class="product-name">O Senhor dos Anéis por J.R.R. Tolkien</p>
                     <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                    <p class="product-price">87,48<span>$ Reais</span> </p>
+                    <p class="product-price">87.48<span>$ Reais</span> </p>
+                    <button id="botao" class="add-cart cart3"> Compre &#8594; </button>
                 </div>
                 <div class="product">
-                    <img src="images/produtos/produto7.png">
+                    <img src="https://m.media-amazon.com/images/I/51cF7jnQGBS._SY445_SX342_.jpg">
                     <p class="product-name">O Alquimista por Paulo Coelho</p>
                     <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
                     <p class="pproduct-price">38.90<span>$ Reais</span> </p>
+                    <button id="botao" class="add-cart cart4"> Compre &#8594; </button>
                 </div>
                 <div class="product">
-                    <img src="images/produtos/produto8.png">
+                    <img src="https://m.media-amazon.com/images/I/81TmOZIXvzL._SY466_.jpg">
                     <p class="product-name">O Pequeno Príncipe de Antoine de Saint-Exupéry</p>
                     <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                     <p class="product-price">19.90<span>$ Reais</span> </p>
+                    <button id="botao" class="add-cart cart5"> Compre &#8594; </button>
                 </div>
             </div>
 
@@ -83,73 +79,82 @@
             <div class="subtitle-underline"></div>
             <div class="cols cols-4">
                 <div class="product">
-                    <img src="images/produtos/produto8.png">
+                    <img src="https://m.media-amazon.com/images/I/81TmOZIXvzL._SY466_.jpg">
                     <p class="product-name">O Pequeno Príncipe de Antoine de Saint-Exupéry</p>
                     <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                     <p class="product-price">19.90<span>$ Reais</span> </p>
+                    <button id="botao" class="add-cart cart6"> Compre &#8594; </button>
                 </div>
                 <div class="product">
-                    <img src="images/produtos/produto9.png">
+                    <img src="https://m.media-amazon.com/images/I/61WE-zN+Q+L._SX342_SY445_.jpg">
                     <p class="product-name">Onde vivem os monstros por Maurice Sendak</p>
                     <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                     <p class="product-price">55.74<span>$ Reais</span> </p>
+                    <button id="botao" class="add-cart cart7"> Compre &#8594; </button>
                 </div>
                 <div class="product">
-                    <img src="images/produtos/produto10.png">
+                    <img src="https://m.media-amazon.com/images/I/51fsECuE09L._SX342_SY445_.jpg">
                     <p class="product-name">O Grufalo por Julia Donaldson e Axel Scheffler </p>
                     <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
                     <p class="pproduct-price">46.90<span>$ Reais</span> </p>
+                    <button id="botao" class="add-cart cart8"> Compre &#8594; </button>
                 </div>
                 <div class="product">
-                    <img src="images/produtos/produto11.png">
+                    <img src="https://m.media-amazon.com/images/I/71b5JH10OpL._SY466_.jpg">
                     <p class="product-name">A Lagarta Muito Comilona por Eric Carle</p>
                     <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                     <p class="product-price">46.08<span>$ Reais</span> </p>
+                    <button id="botao" class="add-cart cart9"> Compre &#8594; </button>
                 </div>
                 <div class="product">
-                    <img src="images/produtos/produto12.png">
+                    <img src="https://m.media-amazon.com/images/I/515vbT3t2UL._SY445_SX342_.jpg">
                     <p class="product-name">Cinquenta tons de cinza eBook Kindle</p>
                     <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
                     <p class="product-price">42.21<span>$ Reais</span> </p>
+                    <button id="botao" class="add-cart cart10"> Compre &#8594; </button>
                 </div>
                 <div class="product">
-                    <img src="images/produtos/produto13.png">
+                    <img src="https://m.media-amazon.com/images/I/51s6lglXdSL._SY445_SX342_.jpg">
                     <p class="product-name">A garota no trem eBook Kindle</p>
                     <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
                     <p class="product-price">26.53<span>$ Reais</span> </p>
+                    <button id="botao" class="add-cart cart11"> Compre &#8594; </button>
                 </div>
                 <div class="product">
-                    <img src="images/produtos/produto14.png">
+                    <img src="https://m.media-amazon.com/images/I/811ivBP1rsL._SY466_.jpg">
                     <p class="product-name">A culpa é das estrelas eBook Kindle</p>
                     <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
                     <p class="pproduct-price">27.63<span>$ Reais</span> </p>
+                    <button id="botao" class="add-cart cart12"> Compre &#8594; </button>
                 </div>
                 <div class="product">
-                    <img src="images/produtos/produto15.png">
+                    <img src="https://m.media-amazon.com/images/I/81iVW0VvbUL._SY466_.jpg">
                     <p class="product-name">Capitães da Areia eBook Kindle</p>
                     <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
                     <p class="product-price">28.51<span>$ Reais</span> </p>
+                    <button id="botao" class="add-cart cart13"> Compre &#8594; </button>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <div class="gray-background">
             <div class="page-inner-content">
                 <div class="header-inner-content">
                     <div class="header-bottom-side exclusive-container">
-                        <div class="header-bottom-side-left" id="livros-4">
-                            <!-- <h2>Bíblia Sagrada - Edição Pastoral</h2>
+                        <div class="header-bottom-side-left">
+                            <h2>Bíblia Sagrada - Edição Pastoral</h2>
                             <p> O livro mais vendido do mundo, historicamente, é a Bíblia. É uma coleção de textos religiosos que são considerados sagrados por cristãos, judeus e muitos outros grupos religiosos. A Bíblia tem sido traduzida para centenas de idiomas e continua sendo amplamente lida e vendida em todo o mundo. No entanto, é importante notar que as vendas da Bíblia não são rastreadas da mesma forma que os livros modernos, então é difícil determinar com precisão o número exato de cópias vendidas.</p>
-                            <button> Compre &#8594; </button> -->
+                            <p class="product-price">20.51<span>$ Reais</span> </p>
+                            <button id="botao" class="add-cart cart14"> Compre &#8594; </button>
                         </div>
                         <div class="header-bottom-side-right"></div>
-                        <!-- <img src="images/exclusivo.png" > -->
+                        <img class="biblia" src="https://d1pkzhm5uq4mnt.cloudfront.net/imagens/capas/mp_a6d2876c770d633fbdf6bc6ef4673212.jpg" >
                     </div>
 
                 </div>
             </div>
         </div>
-
+        <hr class="page-inner-content"/>
     <footer class="gray-background">
         <div class="page-inner-content footer-content">
             <div class="download-options">
@@ -184,8 +189,11 @@
         </div>
 
     </footer>
-
+    
     <script src="JS/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
     <script>
         const navbar = document.querySelector (".navbar");
         const menuButton = document.querySelector (".menu-button");

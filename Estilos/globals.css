@@ -88,7 +88,7 @@ nav ul li:hover {
 }
 
 header {
-    background-image: #c7c7c7;
+    background-image: radial-gradient(#fff, #c7c7c7);
 }
 
 .header-bottom-side {
@@ -137,9 +137,13 @@ header {
 }
 
 .header-bottom-side-right img {
-    width: 110%;
+    width: 250px;
+    height: 350px;
 }
-
+.biblia{
+    width: 250px;
+    height: 350px;
+}
 /*Media Queries*/
 
 @media (max-width :800px) {
@@ -185,11 +189,11 @@ header {
 
 /*Main Content*/
 main {
-    background-color: #ffffff;
+    background-image: radial-gradient(#fff, #c7c7c7);;
 }
 
 .gray-background {
-    background-color: #204884;
+    background-color: #0084ff;
 }
 
 .page-inner-content {
@@ -199,7 +203,7 @@ main {
 
 .cols {
     margin: 0px 10px;
-    display: flex;
+    display: grid;
     justify-content: space-evenly;
     padding: 4rem 1rem;
 }
@@ -210,49 +214,18 @@ main {
 }
 
 .cols-3 img {
-    max-width: 100%;
+    max-width: 250px;
 }
 
 .cols-4 img {
-    max-width: 80%;
+    max-width: 250px;
+    height: 350px;
 }
 
-.cols-4 > #livros{
+.cols-4 {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    width: 500px;
-    display: grid;
-}
 
-/* .livro{
-    max-width: 500px;
-    color: #2c2c2c;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-} */
-
-.nome-livro{
-    background: none;
-    font-weight: 600;
-    margin-top: 0.4rem;
-}
-
-.preco-livro{
-    font-weight: 600;
-    color: #2c2c2c;
-}
-
-.botao-comprar-livro{
-    background-color: #0084ff;
-    border: none;
-    cursor: pointer;
-    padding: 0.3rem 0.30rem;
-    border-radius: 9999px;
-    color: #fff;
-    font-weight: 500;
-    font-size: 0.7rem;
-    transition: all 02.s;
 }
 
 .cols>* {
@@ -264,7 +237,40 @@ main {
 .cols>*:hover {
     transform: translateY(-5px);
 }
+#botao{
+    background-color: #0084ff;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 3.0rem;
+    border-radius: 9999px;
+    color: #fff;
+    font-weight: 500;
+    width: 0px 25px;
+    font-size: 0.9rem;
+    transition: all 02.s;
+    justify-content: center;
+}
 
+#botaobiblia{
+    background-color: #1f1f1f;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 3.0rem;
+    border-radius: 9999px;
+    color: #fff;
+    font-weight: 500;
+    width: 0px 25px;
+    font-size: 0.9rem;
+    transition: all 02.s;
+    justify-content: center;
+}
+#botao:hover {
+    background-color: #434343;
+}
+
+#botaobiblia:hover {
+    background-color: #434343;
+}
 .section-title {
     text-align: center;
     margin-top: 4rem;
@@ -284,8 +290,8 @@ main {
     max-width: 500px;
     color: #2c2c2c;
     margin-bottom: 1rem;
-    display: grid;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-name {
